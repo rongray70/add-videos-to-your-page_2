@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Ron's Notes</title>
+	<link rel="stylesheet" href="rons-notes.css">
+</head>
+
+<body>
+	<div class="title">
+		Beginning Notes
+	</div>
+	<div class="notes">
+		<p>HTML is <b><em>reasonably</em> straightforward</b></p>
+		<p>Line breaks (br)<br>are called inline tags while paragraph (p) tags are block 
+			tags.  Block tags can optionally have a defined height/width.</p>
+		<p>This is how a <a href="google.com">link</a> works.</p>
+	</div>
+	
+	<div class="title">
+		Work Session 1
+	</div>
+	<div class="notes">
+		<p>Have realized that I am not a note-taker for some of this stuff... not much to 
+			put into 'code' for Work Session 1.</p>
+		<p>'div' is used for blocks and the class can be used with css for styling.</p>
+		<p>'span' is used inline and can also have classes that can be defined in css.</p>
+		<p>Don't really see all of the point of 'span' yet... am guessing it will be more 
+			obvious once we get into css.</p>
+		<p>I really wish the class had a better table of contents or more obvious way of 
+			seeing where you are at versus where you were last at.  Tried going back a few 
+			videos to review and then had to keep skipping through videos I had already 
+			seen before finally figuring out where I had been.</p>
+	</div>
+
+	<div class="title">
+		Adding CSS Style to HTML Structure
+	</div>
+	<div class="notes">
+		<p>Order matters when defining css.</p>
+		<p>You could also use 'style' within the 'head' section of an html page to 
+			define styles, but using a separate css file allows you to apply/modify 
+			your style across multiple pages without having to update each html page.</p>
+		<p>You could even add style settings in the 'div'.</p>
+		<p>An exhaustive css reference is available at <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference">mozilla</a>.</p>
+		<p>Boxes have:  margin / border / padding / content</p>
+		<p>HTML and CSS can be validated:
+			<ul>
+				<li>To verify HTML: <a href="http://validator.w3.org/#validate_by_input">http://validator.w3.org/#validate_by_input</a></li>
+				<li>To verify CSS: <a href="http://jigsaw.w3.org/css-validator/#validate_by_input">http://jigsaw.w3.org/css-validator/#validate_by_input</a></li>
+			</ul>
+		</p>
+	</div>
+
+	<div class="title">
+		Telling Computers What To Do
+	</div>
+	<div class="notes">
+		<p>We will be using Python, which is an interpreted language versus 
+			compiled code.</p>
+		<p>Backus-Naur Form: &lt;non-terminal&gt; -> &lt;replacement&gt; (terminal)
+			<br>Derivation: Replacing non-terminals with replacements (terminals) 
+			until the non-terminals have all been replaced by terminal values.
+		</p>
+		<div class="subheading">Python</div>
+		<p>Can get substrings using the expression &lt;string_variable&gt; [ &lt;expression&gt; : 
+			&lt;expression&gt; ]
+			<br>strVariable[3:3] would return the same thing as strVariable[3]
+			<br>strVariable[3:5] would return character positions 4-6
+			<br>strVariable[3:] would return from position 4 to the end of the string
+			<br>strVariable[-5:] would return the last 5 characters of the string
+		</p>
+		<p>Search strings using .find, in the format &lt;string_variable&gt;.find(&lt;substring&gt;, 
+			&lt;starting_position&gt;)
+			<br>the return value is the position of the first character of the substring, 
+			starting at the (optional) starting_position
+			<br>a -1 return value indicates that the substring value was not found
+		</p>
+		<p>Multi-line strings can be created using triple quotes:
+			<br>print """
+				Here is the first line
+				And here is the second line
+				And here is the third line
+			"""
+		</p>
+		<p>Procedures/functions are defined as:
+			<br>def function_name (input_variable[,input_variable...])
+			<br>use 'return &lt;variable&gt;' to return a value from the function
+		</p>
+		<p>Why use functions?  Portability - a function in one app might be usable in 
+			another; Efficiency - code that is repeated can be placed in a function and 
+			called multiple times; Readability - proper function names help to make 
+			your code more legible and easier to follow</p>
+		<p>While (condition):</p>
+		<p>if (condition): else:</p>
+		<p>Lists can be created by specifying list_name = [item1, item2, ...]</p>
+		<p>Lists are mutable.</p>
+		<p>List assignments act more like pointers (called aliasing) so if p=[1,2,3] 
+			and you do q=p then q and p will both point to the same list!</p>
+		<p>for &lt;variable&gt; in &lt;list_variable&gt;:
+			<br>items to execute
+		</p>
+		<p>&lt;value&gt; [not] in &lt;list&gt; allows us to locate items in a list, 
+			returning a boolean value.</p>
+		<p>list_element.index(search_value) allows us to locate the index value for 
+			the first instance of search_value in list_element.</p>
+	</div>
+
+	<div class="title">
+		Add Videos to Your Page
+	</div>
+	<div class="notes">
+		<p>Module: file containing (often common) sets of functions.</p>
+		<p>Abstraction is when we cannot see "inside" the function we are using.</p>
+		<p>Python documentation link: https://docs.python.org/2.7/library/index.html</p>
+		<p>When using os.listdir on a Windows PC, you need to preceed the path with 
+			an r (for raw pack) which instructs the compiler not to modify or adjust 
+			the path string.  For example: os.listdir(r"C:\Program Files\")</p>
+		<p>The "turtle" file contains a "Turtle" class from which we can make instances.</p>
+		<p>Twilio is an external (non-Python) shared library.  It can be used to send 
+			text messages.</p>
+		<p>Google's Python style guide available at: 
+			http://google-styleguide.googlecode.com/svn/trunk/pyguide.html</p>
+		<p>Classes allow you to re-use definitions and methods without having to re-define 
+			everything for every instance you need.</p>
+		<p>Library is simply a group of classes, generally organized together as groups of 
+			common functions/methods (ie, turtle, twilio, standard library, etc).  Multiple
+			modules might create a library.</p>
+		<p>Define classes in a class file, so that they can be used in multiple areas of 
+			your code when you have larger projects - also keeps it oop/reusable!</p>
+		<p>The __init__ function is a constructor... it creates (constructs) your instance.</p>
+		<p>Instance variables are those variables which belong to a specific instance.</p>
+		<p>Instance methods are methods (functions) which belong to or are available to 
+			an instance.</p>
+		<p>Class variables are ones defined within a class (above the init).  They are akin 
+			to global variables for the class.</p>
+		<p>Python class just like others -> objects are specific instances of a class item.</p>
+		<p>Great description differentiating class and object and python's use of classes: 
+			http://learnpythonthehardway.org/book/ex42.html</p>
+		<p>Method overriding is when a child contains a method already specified in a parent 
+			class.  The child method, when called, will use the child's method, not the parent's 
+			method.</p>
+		<p>Tons of non-standard classes already exist - use google - check for someone else's 
+			library first before recreating the wheel.  just download and import the classes 
+			you need.  modify methods you don't like by overriding.</p>
+		<p>OOP is a design wherein you define classes and methods rather than specific elements.  For
+			example, you might create a 'dog' class which defines various attributes (hair length,
+			temperment) and methods to interact with an element (walk, feed, play).  You can now use
+			this class to create as many instances/objects of a dog as you need.  Without OOP you would
+			be defining the doggy attributes/methods each time you created a new 'dog', but with OOP
+			you need only do that once in a class.  This makes alterations much quicker and simpler, 
+			as alterations or additions can be made in one class which will	then affect all of the 
+			instances using that class.  For example, you could add a 'size' attribute, which would
+			then become available to all instances of all dogs.  Without OOP and classes you would 
+			have to make changes to the definitions of each instance.  It's very similar to CSS... 
+			rather than defining the particular attributes you want for each and every paragraph in
+			your html document you can simply create a paragraph style class which defines how all 
+			instances of a paragraph should appear (normal weight, 10px, etc).  Should you decide that
+			all paragraphs need to be sans serif, then only one change is needed (to the paragraph
+			class) and all paragraphs will subsequently have the change.</p>
+		<p>Inheritance occurs when subclasses inherit the features of a parent class.  This can
+			be done with class variables as well as class methods.  The simplist example I know of
+			relates back to cascading style sheets.  A body element might have a definition for
+			a particular font (Times New Roman).  All of the sub-elements of body (headings,
+			paragraphs, etc) will inherit this font selection.  This saves the necessity of having
+			to explicitly define the font for each sub-element.  It (again) also allows for quick 
+			changes if the developer decides to use Arial instead... one change is made to the
+			body font-family and all sub-elements subsequently use that font.  As with python class
+			variables and methods, specific selections can still be overwritten should the developer
+			choose to do so.</p>
+	</div>
+
+	<div class="title">
+		Let Anyone Modify
+	</div>
+	<div class="notes">
+		<p>Network: group of entities that can communicate, even though they are not all directly
+			connected</p>
+		<p>Latency: time that it takes for a message to travel from source to destination</p>
+		<p>Bandwidth: amount of information that can be transmitted per unit time; rate of
+			data which can be transmitted (ie, bps)</p>
+		<p>Bit: smallest unit of information</p>
+		<p>Protocol: set of agreed-upon rules which dictate how two entities talk to each other. An
+			example is http.</p>
+		<p>URL: uniform resource locator</p>
+		<p>query parameter: parameters which can be passed in the URL (?x=1&amp;y=2...)</p>
+		<p>fragment: indentified in query parameter using hash (#) and occurs at end of list;
+			references a particular part of the page; not sent to server, used by browser</p>
+		<p>http has a method, path, and version: for example
+			<br>http://www.example.com/foo
+			<br>GET /foo HTTP/1.1 is sent to www.example.com on port 80</p>
+		<p>An http request generally contains multiple headers:
+			<br>host: indicates the host server/name/address
+			<br>user-agent: indicates the app used to make the request (chrome, ie, ffox)</p>
+		<p>http responses are sent back from the server; example response:
+			<br>HTTP/1.1 200 OK</p>
+		<p>Responses can also contain multiple headers:
+			<br>Date: indicates server's timestamp
+			<br>Server: name/version number of server app (ie, Apache/2.2.3)
+			<br>Content-Type: type of data returning (ie, text/html)
+			<br>Content-Length: length of content</p>
+		<p>Purpose of a 'server' is to respond to requests</p>
+		<p>Types of responses:
+			<br>static: existing file or image
+			<br>dynamic: response created based on request, generally created by web application</p>
+		<p>forms: not a lot of notes here. background: In 2000 I wrote a project application for my
+		deparment using ASP. The app interfaces with Microsoft SQL Server to store various project
+		information and Microsoft's SMTP service to send emails.</p>
+		<p>url encoding (or escaping): translate your query parameters to a properly formatted url</p>
+	</div>
+
+</body>
+</html>
